@@ -10,6 +10,10 @@ resources:
  pipelines:
   - pipeline: buildContosoAir # identifier for the resource used in pipeline resource variables
     source: Student1-38929258.ContosoAir # name of the pipeline that produces the artifact
+    trigger:
+     branches:
+      include:
+       - master
 
 pool:
   vmImage: ubuntu-latest
